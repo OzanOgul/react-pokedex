@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #efefbb;
+  background: linear-gradient(to right, #d4d3dd, #efefbb);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+html {
+  /* font-size: 10px 
+    Percentage of user's browser font-size setting 
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+  */
+  font-size: 62.5%;
+}
+/* 
+.pokemon-logo {
+  width: 21rem;
+  margin-top: 3rem;
+} */
+
+h1 {
+  letter-spacing: 1.5px;
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 5rem;
+  color: rgb(51, 51, 51);
+}
+
+form {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+input,
+button {
+  background-color: #f8f9fa;
+  border: none;
+  padding: 1.5rem 2rem;
+}
+
+input {
+  font-weight: bold;
+  border-radius: 10px;
+  /*   font-size: 1.4rem; */
+}
+
+input:focus {
+  outline: none;
+}
+
+.load-button {
+  /* font-weight: 500; */
+  cursor: pointer;
+  border-radius: 7px;
+  font-size: 1.8rem;
+  transition: background-color 1s ease;
+}
+
+.load-button:hover {
+  /* background-color: #fff3bf; */
+  background-color: #fff9db;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokemon-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1rem;
+}
+
+.pokemon-card {
+  background-color: #eee;
+  width: 20rem;
+  border-radius: 1rem;
+  margin: 1.6rem;
+  padding: 1.8rem;
+  text-align: center;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.4);
+}
+
+.pokemon-card:hover {
+  transition: all ease-out 0.4s;
+  transform: scale(1.05);
+}
+
+.pokemon-card img {
+  max-width: 80%;
+  margin-bottom: 2rem;
+}
+
+.pokemon-card .poke-id {
+  font-size: 1.6rem;
+  padding: 5px 10px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+}
+
+.pokemon-card .poke-name {
+  letter-spacing: 1px;
+  margin: 1.2rem auto;
+  font-size: 2rem;
+}
+.pokemon-card .poke-type {
+  font-size: 1.6rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 1rem;
+  display: inline;
+}
