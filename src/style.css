@@ -55,12 +55,13 @@ button {
 input {
   font-weight: bold;
   border-radius: 10px;
+  color: #444;
   /*   font-size: 1.4rem; */
 }
 
-input:focus {
+/* input:focus {
   outline: none;
-}
+} */
 
 .load-button {
   /* font-weight: 500; */

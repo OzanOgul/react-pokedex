@@ -2,12 +2,15 @@ import { useEffect, useState } from 'react';
 import './style.css';
 import Header from './components/Header';
 import PokemonContainer from './components/PokemonContainer';
+import SearchPokemon from './components/SearchPokemon';
 
 function App() {
   const [allPokemons, setAllPokemons] = useState([]);
   const [loadMore, setLoadMore] = useState(
     'https://pokeapi.co/api/v2/pokemon?limit=20'
   );
+  const [searchInput, setSearchInput] = useState('');
+  const [filteredResults, setFilteredResults] = useState([]);
 
   async function getAllPokemons() {
     const res = await fetch(loadMore);
@@ -35,7 +38,19 @@ function App() {
   return (
     <div className="app-container">
       <Header />
-      <PokemonContainer allPokemons={allPokemons} />
+      <SearchPokemon
+        searchInput={searchInput}
+        setSearchInput={setSearchInput}
+        filteredResults={filteredResults}
+        setFilteredResults={setFilteredResults}
+        allPokemons={allPokemons}
+      />
+      <PokemonContainer
+        allPokemons={allPokemons}
+        searchInput={searchInput}
+        setSearchInput={setSearchInput}
+        filteredResults={filteredResults}
+      />
       <button className="load-button" onClick={() => getAllPokemons()}>
         Load Pokemon
       </button>
